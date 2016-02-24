@@ -1,4 +1,5 @@
 require "spec_helper"
+require "capybara/rspec"
 require "pakyow-test"
 
 require "dotenv"
