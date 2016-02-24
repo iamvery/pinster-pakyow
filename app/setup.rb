@@ -14,6 +14,18 @@ Pakyow::App.define do
 
     # put global config here and they'll be available across environments
     app.name = 'Pakyow'
+
+    # TODO move this to a method or something?
+    database_url = ENV.fetch("DATABASE_URL")
+    rom_config = ROM::Configuration.new(:sql, database_url)
+      .use(:macros)
+    rom_config.commands(:links) do
+      define(:create) do
+        result :one
+      end
+    end
+
+    app.rom = ROM.container(rom_config)
   end
 
   configure :development do
