@@ -17,6 +17,7 @@ end
 
 group :test do
   gem 'rspec'
+  gem "capybara"
 end
 
 # your gems here
