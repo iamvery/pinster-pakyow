@@ -10,6 +10,10 @@ gem 'pakyow', github: 'pakyow/pakyow'
 gem 'puma', platforms: :ruby
 gem 'thin', platforms: :mswin
 
+gem "pg" # postgresql database
+gem "inflecto" # inflector library for rom
+gem "rom-sql" # sql adapter for rom (persistence mapping toolkit)
+
 group :development, :test do
   gem "dotenv"
   gem "pry"
