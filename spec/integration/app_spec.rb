@@ -1,4 +1,4 @@
-require_relative '../spec_helper'
+require "pakyow_helper"
 
 describe Pakyow::App do
   context 'when navigating to the default route' do
