@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # live on the edge and uncomment this line
-# gem 'pakyow', github: 'pakyow/pakyow'
+gem 'pakyow', github: 'pakyow/pakyow'
 
 # use the latest released version
-gem 'pakyow', '~> 0.10'
+#gem 'pakyow', '~> 0.10'
 
 # app server
 gem 'puma', platforms: :ruby
@@ -17,6 +17,7 @@ end
 
 group :test do
   gem 'rspec'
+  gem "capybara"
 end
 
 # your gems here
