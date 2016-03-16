@@ -18,8 +18,7 @@ Pakyow::App.routes do
 
     create do
       # TODO nothing like strong parameters I suppose?
-      attributes = { created_at: Time.now, updated_at: Time.now }.merge(params[:link])
-      rom.command(:links).create.call(attributes)
+      data(:link).create(params[:link])
 
       # TODO can I redirect "back"? Or at least have a path helper?
       redirect "/links"
