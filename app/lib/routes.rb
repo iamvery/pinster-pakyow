@@ -5,7 +5,7 @@ Pakyow::App.routes do
 
   restful :link, "/links" do
     list do
-      links = Pakyow::Config.app.rom.relation(:links).to_a
+      links = rom.relation(:links).to_a
 
       view.partial(:list).scope(:link).apply(links)
     end
