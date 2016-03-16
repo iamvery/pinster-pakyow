@@ -23,6 +23,8 @@ Pakyow::App.define do
       define(:create) do
         result :one
       end
+
+      define(:delete)
     end
 
     app.rom = ROM.container(rom_config)

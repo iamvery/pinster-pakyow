@@ -3,5 +3,11 @@ Pakyow::App.routes do
     logger.info 'hello'
   end
 
-  # define application routes here
+  restful :link, "/links" do
+    list do
+      links = Pakyow::Config.app.rom.relation(:links).to_a
+
+      view.scope(:link).apply(links)
+    end
+  end
 end
