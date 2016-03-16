@@ -1,0 +1,8 @@
+machine:
+  ruby:
+    version: 2.2.3
+  environment:
+    DATABASE_URL: postgres://ubuntu@localhost/circle_test
+database:
+  override:
+    - psql --dbname circle_test < structure.sql
