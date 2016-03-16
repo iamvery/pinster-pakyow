@@ -1,3 +1,10 @@
+begin
+  require "dotenv"
+  Dotenv.load
+rescue LoadError
+  # dotenv not installed
+end
+
 require 'bundler/setup'
 require 'pakyow'
 
