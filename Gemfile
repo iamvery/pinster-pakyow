@@ -11,6 +11,7 @@ gem 'puma', platforms: :ruby
 gem 'thin', platforms: :mswin
 
 group :development, :test do
+  gem "dotenv"
   gem "pry"
 end
 
