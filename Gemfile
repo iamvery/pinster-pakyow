@@ -10,6 +10,10 @@ gem 'pakyow', '~> 0.10'
 gem 'puma', platforms: :ruby
 gem 'thin', platforms: :mswin
 
+group :development, :test do
+  gem "pry"
+end
+
 group :test do
   gem 'rspec'
 end
