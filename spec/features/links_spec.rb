@@ -34,4 +34,16 @@ RSpec.describe "Links", type: :feature do
       expect(page).to have_content("youtube.com")
     end
   end
+
+  describe "creating link" do
+    it "adds the link to the index" do
+      # TODO are there path helper methods in pakyow
+      visit "/links"
+
+      fill_in "Url", with: "http://iamvery.com"
+      click_on "Create link"
+
+      expect(page).to have_content("iamvery.com")
+    end
+  end
 end
