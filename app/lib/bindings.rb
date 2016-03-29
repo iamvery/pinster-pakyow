@@ -9,5 +9,11 @@ Pakyow::App.bindings do
         content: bindable[:url],
       }
     end
+
+    binding :delete do
+      {
+        action: "/links/#{bindable[:id]}"
+      }
+    end
   end
 end

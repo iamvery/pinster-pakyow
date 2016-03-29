@@ -23,5 +23,10 @@ Pakyow::App.routes do
       # TODO can I redirect "back"? Or at least have a path helper?
       redirect "/links"
     end
+
+    remove do
+      data(:link).delete(params[:link_id])
+      redirect "/links"
+    end
   end
 end
