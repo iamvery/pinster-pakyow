@@ -46,4 +46,17 @@ RSpec.describe "Links", type: :feature do
       expect(page).to have_content("iamvery.com")
     end
   end
+
+  describe "deleting link" do
+    it "removes the link from the index" do
+      create_link(url: "http://iamvery.com")
+
+      # TODO are there path helper methods in pakyow
+      visit "/links"
+
+      click_on "×"
+
+      expect(page).not_to have_content("iamvery.com")
+    end
+  end
 end
