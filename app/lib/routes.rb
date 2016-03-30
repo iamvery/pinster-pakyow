@@ -5,9 +5,9 @@ Pakyow::App.routes do
 
   restful :link, "/links" do
     list do
-      links = rom.relation(:links).to_a
+      links = data(:link).all
 
-      view.partial(:list).scope(:link).apply(links)
+      view.partial(:list).scope(:link).mutate(:list, with: links).subscribe
 
       # TODO this in effect adds attributes to the form in the view for
       # submitted params. See https://pakyow.org/docs/forms
